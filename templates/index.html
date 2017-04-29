@@ -19,17 +19,28 @@
 	.header {
 		font-size: 72px;
 	}
+
+	a {
+		color: green;
+	}
+
+	.code {
+		background-color: #F3F3F3;
+		border-radius: 3px;
+		padding: 20px;
+	}
 	</style>
 
+	<div class="center header">
+		Hello World
+	<ul>
+		<li><a href="/c">C</a></li>
+		<li><a href="/python">Python</a></li>
+	</ul>
+	</div>
 	{% if code %}
-	<code><pre>{{ code }}</pre></code>
-	{% else %}
-		<div class="center header">
-			Hello World
-		<ul>
-			<li><a href="/c">C</a></li>
-			<li><a href="/python">Python</a></li>
-		</ul>
+		<div class="center code">
+			<code><pre>{{ code }}</pre></code>
 		</div>
 	{% endif %}
 </body>
