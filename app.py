@@ -18,8 +18,9 @@ main() {
 
 @app.route("/python")
 def python():
-	code = """print "Hello World!"
-	"""
+	code = """
+def helloworld():
+	print 'Hello World!'"""
 	return render_template('index.html', code=code)
 
 if __name__ == "__main__":
