@@ -2,7 +2,8 @@
 # github.com/sean-smith/helloworld
 
 from flask import Flask, render_template
-app = Flask(__name__)
+app = Flask(__name__,static_url_path='', 
+       	static_folder='static')
 
 @app.route("/")
 def hello():
@@ -20,8 +21,9 @@ main() {
 def python():
 	code = """
 def helloworld():
-	print 'Hello World!'"""
+	print ' Hello World!'"""
 	return render_template('index.html', code=code)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,
+    	)
