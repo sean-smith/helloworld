@@ -3,6 +3,13 @@
 	<title>Hello World!</title>
 </head>
 <body>
-	<code>print "Hello World!"</code>
+	{% if code %}
+	<code><pre>{{ code }}</pre></code>
+	{% else %}
+		<ul>
+			<li><a href="/c">C</a></li>
+			<li><a href="/python">Python</a></li>
+		</ul>
+	{% endif %}
 </body>
 </html>
